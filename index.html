@@ -1,0 +1,95 @@
+<!--
+File: index.html
+Created: Sunday, 10th January 2021 12:57:27 pm
+Author: Aquib Mujtaba (aquib.pust13@gmail.com)
+-----
+Last Modified: Tuesday, 12th January 2021 6:29:08 pm
+Modified By: Aquib Mujtaba (aquib.pust13@gmail.com)
+-----
+Copyright (c) 2021 @quib_self
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <! bootstrap-4 cdn -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="style.css">
+        <title>Guess Number Game</title>
+</head>
+
+<body>
+
+    <div id="main_container" class="container">
+        <div class="row bg-success bar rounded-top">
+            <div class="col">
+                <h3>Number Game</h3>
+                <p>Guess the correct number with a limited chance . . !</p>
+            </div>
+        </div>
+        <div id="body_container" class="row main">
+            <div class="ins col col-md-5">
+                <h5>Instructions: </h5>
+                <ul>
+                    <li>You can set-up the range of number and play.</li>
+                    <li>Now think a number in between the range.</li>
+                    <li>Write down the number that you thought.</li>
+                    <li>Hit the <b>submit</b> button to check.</li>
+                    <li>You have only <b>three</b> chances to find the number.</li>
+                </ul>
+                <h5>নির্দেশনা: </h5>
+                <ul class="mb-4">
+                    <li>নম্বরের পরিধি নির্বাচন করুন এবং শুরু করুন।</li>
+                    <li>একটা সংখ্যা ভাবুন যা উক্ত পরিধির মধ্যে বিদ্যমান।</li>
+                    <li>সংখ্যাটি খালি ঘরে লিখুন।</li>
+                    <li>সংখ্যাটি সঠিক কিনা যাচাই করুন।</li>
+                    <li>তিনটি সুযোগে সংখ্যাটি নির্ণয় করার চেষ্টা করুন। </li>
+                </ul>
+            </div>
+
+            <div class="col col-md-7 vl" >
+                <h3 class=" mb-5">Play Game . . !</h3>
+                <div class="row input">
+                    <div class="col-md-6">
+                        <label class="lead label">From:</label>
+                        <input id="from_input" type="text" class="fom-control" value="1">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="lead label">To:</label>
+                        <input id="to_input" type="text" class="fom-control" value="10">
+                    </div>
+                </div>
+                <div id="main_div" class="form">
+                    <button id="play_game" class="btn btn-success btn-lg btn-block pr-4">Start Game</button>
+                </div>
+                <div id="replacing_div" class="form" style="display: none;">
+                    <input id="number_input" type="text" class="form-control"
+                        placeholder="Guess a number and write here ...">
+                    <br>
+                    <button id="check_button" type="submit" class="btn btn-success btn-lg btn-block">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+        <footer class="footer bg-success rounded-bottom">
+            Developed by Aquib @ 2021
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

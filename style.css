@@ -1,0 +1,79 @@
+/*
+ * File: style.css
+ * Created: Sunday, 10th January 2021 12:57:50 pm
+ * Author: Aquib Mujtaba (aquib.pust13@gmail.com)
+ * -----
+ * Last Modified: Tuesday, 12th January 2021 6:27:49 pm
+ * Modified By: Aquib Mujtaba (aquib.pust13@gmail.com)
+ * -----
+ * Copyright (c) 2021 @quib_self
+ */
+
+.container {
+    margin-top: 10px;
+
+}
+.main{
+    padding-top: 20px;
+
+}
+.bar{
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-left: 100px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: beige;
+
+
+}
+.bar h3{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight:900;
+}
+.col{
+    padding-top: 30px;
+}
+.vl{
+    border-left: 2px solid green;
+    height: 350px;
+
+}
+.ins{
+    padding-left: 20px;
+}
+.form{
+    padding-top: 40px;
+    padding-left: 40px;
+}
+.input{
+    padding-left: 40px;
+}
+ul{
+    font-weight: 400;
+}
+.lead{
+    font-weight: 500;
+}
+.footer{
+    text-align: center;
+    color: ivory;
+    padding: 10px;
+}
+
+.success {
+    text-align:center;
+    color: white;
+    padding: 5px;
+    background: rgb(127, 224, 127);
+    font-size: large;
+}
+
+.error {
+    text-align: center;
+
+    color: white;
+    padding: 5px;
+    background: rgb(226, 124, 124);
+    font-size: large;
+}
