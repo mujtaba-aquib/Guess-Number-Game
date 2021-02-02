@@ -3,7 +3,7 @@
  * Created: Sunday, 10th January 2021 12:57:41 pm
  * Author: Aquib Mujtaba (aquib.pust13@gmail.com)
  * -----
- * Last Modified: Tuesday, 12th January 2021 6:27:38 pm
+ * Last Modified: Tuesday, 2nd February 2021 9:05:51 pm
  * Modified By: Aquib Mujtaba (aquib.pust13@gmail.com)
  * -----
  * Copyright (c) 2021 @quib_self
@@ -49,6 +49,8 @@ startButton.addEventListener('click', function (e) {
 
     document.querySelector('#main_div').style.display = 'none';
     document.querySelector('#replacing_div').style.display = 'block';
+
+    UI.showAlert(`You have only 3 chances to try . . !`, "warning", "2000");
     let max = parseInt(toInputField.value);
     let min = parseInt(fromInputField.value);
 
@@ -64,15 +66,14 @@ function mainFunction(e) {
     if (fromInputField.value === '' || toInputField.value === '' || numberInputField.value === '') {
         //show alert.
         //alert("Fill the range...");
-        UI.showAlert("Fill-up the fields carefully.", "error","1500");
+        UI.showAlert("Fill-up the fields carefully.", "error","2000");
     } else {
-        let result;
-        result = 'Your guess is Not Correct.';
+        let result = false;
         let guess = parseInt(numberInputField.value);
 
 
         if (guess === randomNumber) {
-            result = 'Your guess is Correct.';
+            result = true;
             numberInputField.value = "";
             endGame(result);
         } else if (guess > randomNumber) {
@@ -80,7 +81,7 @@ function mainFunction(e) {
                 numberInputField.value = "";
                 //Show alert message
                 //alert('Check again the guess id greater than actual number');
-                UI.showAlert(`${guess} is greater than the actual number.`,"error","1500");
+                UI.showAlert(`${guess} is Greater, You have ${2 - count} chance.`,"error","2000");
                 numberInputField.value = "";
             } else {
                 endGame(result);
@@ -88,7 +89,7 @@ function mainFunction(e) {
         } else {
             if (count < 2) {
                 //alert('Check again the guess id smaller than actual number');
-                UI.showAlert(`${guess} is smaller than the actual number.`,"error","1500");
+                UI.showAlert(`${guess} is Smaller, You have ${2-count} chance.`,"error","2000");
                 numberInputField.value = "";
             } else {
                 endGame(result);
@@ -113,15 +114,15 @@ function getRandomNumber(max, min) {
 
 function endGame(result) {
 
-    if (result === 'Your guess is Not Correct.') {
+    if (result === false) {
         document.querySelector('#main_div').style.display = 'block';
         document.querySelector('#replacing_div').style.display = 'none';
         numberInputField.value = "";
-        UI.showAlert(`${result}. You have only three chances.`, "error","3500");
+        UI.showAlert(`Lost the game.'\n You have only three chances.`, "error","3500");
     } else {
         document.querySelector('#main_div').style.display = 'block';
         document.querySelector('#replacing_div').style.display = 'none';
         numberInputField.value = "";
-        UI.showAlert(`Congratulations..! ${result}. You tried ${++count} times.`, "success","3500");
+        UI.showAlert(`Congratulations..! You won the game. You tried ${++count} times.`, "success","3500");
     }
 }
