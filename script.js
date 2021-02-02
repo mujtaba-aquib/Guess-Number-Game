@@ -118,11 +118,11 @@ function endGame(result) {
         document.querySelector('#main_div').style.display = 'block';
         document.querySelector('#replacing_div').style.display = 'none';
         numberInputField.value = "";
-        UI.showAlert(`Lost the game.'\n You have only three chances.`, "error","3500");
+        UI.showAlert(`Lost the game. ${randomNumber} is the actual number.`, "error","4000");
     } else {
         document.querySelector('#main_div').style.display = 'block';
         document.querySelector('#replacing_div').style.display = 'none';
         numberInputField.value = "";
-        UI.showAlert(`Congratulations..! You won the game. You tried ${++count} times.`, "success","3500");
+        UI.showAlert(`Congratulations..! You won the game. You tried ${++count} times.`, "success","4000");
     }
 }
