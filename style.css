@@ -3,7 +3,7 @@
  * Created: Sunday, 10th January 2021 12:57:50 pm
  * Author: Aquib Mujtaba (aquib.pust13@gmail.com)
  * -----
- * Last Modified: Tuesday, 12th January 2021 6:27:49 pm
+ * Last Modified: Tuesday, 2nd February 2021 8:57:35 pm
  * Modified By: Aquib Mujtaba (aquib.pust13@gmail.com)
  * -----
  * Copyright (c) 2021 @quib_self
@@ -75,5 +75,14 @@ ul{
     color: white;
     padding: 5px;
     background: rgb(226, 124, 124);
+    font-size: large;
+}
+
+.warning {
+    text-align: center;
+
+    color: rgb(238, 14, 14);
+    padding: 5px;
+    background: rgb(231, 200, 20);
     font-size: large;
 }
